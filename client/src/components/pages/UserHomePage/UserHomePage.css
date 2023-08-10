@@ -1,0 +1,58 @@
+.user-home-page {
+    background-color: #F7EDE3;
+}
+
+.user-home-page .listing-container {
+    display: flex;
+    height: 100%;
+}
+
+.user-home-page .listings {
+    background-color: white;
+}
+
+.user-home-page .filter-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    width: 85vw;
+}
+
+.user-home-page .filter {
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    height: 30px;
+    width: 220px;
+    padding: 5px;
+    text-align: center;
+}
+
+.user-home-page .filter label {
+    margin-right: 10px;
+}
+
+.user-home-page .listings i:is([id="search-icon"]) {
+    position: relative;
+    left: 35px;
+    font-size: 25px;
+}
+
+.user-home-page .listings input:is([name="search"]) {
+    width: 300px;
+    height: 30px;
+    padding: 16px;
+    font-size: medium;
+    border-radius: 30px;
+}
+
+.user-home-page .listings input:not([name="search"]) {
+    width: 100px;
+    height: 15px;
+}
+
+.user-home-page .row {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}

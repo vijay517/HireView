@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* nav bar styling */
+
+.navBar {
+    display: flex;
+    align-items: center;
+    padding: 30px 93px 15px 65px;
+    background-color: #F7EDE3;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* icon -group styling */
+.icon-group-icon {
+    width: 66px;
+    height: 67px;
+    background: url("./pictures/home-icon.png");
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.icon-group-companyname h3 {
+    margin: 0px;
+}
+
+.icon-group-companyname {
+    text-align: center;
+}
+
+/* Company name styling */
+.companyName {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #2E2E2E;
+}
+
+/* Company moto styling*/
+.companyMoto {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+/* nav-group styling */
+.nav-group-link {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #2E2E2E;
+    margin-left: 44px;
+    text-decoration: none;
+}
+
+.nav-group-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

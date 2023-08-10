@@ -1,0 +1,17 @@
+.service-card-quotation-page {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.service-card-quotation-page img {
+    height: 250px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.service-card-quotation-page .card-details {
+    margin-left: 10px;
+}

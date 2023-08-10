@@ -1,0 +1,13 @@
+.review-star-page{
+    display: flex;
+    align-items: center;
+}
+
+.review-star-page div{
+    margin-left: 5px;
+}
+
+.review-star-page .fa-star{
+    color: red;
+    margin-left: 0px;
+}

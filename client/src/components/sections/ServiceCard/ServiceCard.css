@@ -1,0 +1,59 @@
+.service-card-page {
+    width: 250px;
+}
+
+.service-card-page img {
+    height: 200px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.service-card-page .service-card-category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-card-page .card p:nth-child(4){
+    text-transform: capitalize;
+}
+
+
+.service-card-page .card p:nth-child(3){
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.service-card-page .service-card-category p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: rgba(64, 64, 64, 0.61);
+}
+
+
+.service-card-page #heart:hover {
+    cursor: pointer;
+    transform: scale(2);
+    transition: transform 0.3s ease;
+}
+
+.service-card-page .card button{
+    margin: 25px 50px 0px 50px;
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: #F78883;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.service-card-page .card button:hover{
+    background-color: white;
+}
+

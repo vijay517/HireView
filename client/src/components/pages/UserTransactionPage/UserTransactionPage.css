@@ -1,0 +1,90 @@
+body{
+    box-sizing: border-box;
+}
+
+.user-page{
+    width: 100vw;
+    background-color: #F7EDE3;
+}
+
+.user-page .container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    height: 100%;
+}
+
+.user-page .profile-container{
+    width: 30vh;
+}
+
+.user-page .options{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-page .options a{
+    margin: 25px;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
+.user-page .options a:hover{
+    text-decoration: underline;
+}
+
+.user-page .options button{
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+    background-color: #F78883;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.user-page .options button:hover{
+    background-color: white;
+
+}
+
+.user-page .service-container{
+    width: 70vw;
+    padding: 10px;
+    border: 5px solid;
+    border-radius: 30px;
+    background-color: white;
+    margin-right: 10%;
+}
+
+.user-page .service-container input{
+    width: 290px;
+    height: 40px;
+    padding: 20px;
+}
+
+.user-page #search-icon{
+    position: relative;
+    left: 20px;
+}
+
+.user-page .transaction-containers{
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.user-page .row{
+    display: flex;
+    margin: 15px;
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+}
+
+.user-page #back-arrow-icon{
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}

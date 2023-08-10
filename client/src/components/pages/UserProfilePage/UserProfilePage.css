@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+.user-info-edit-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F7EDE3;
+}
+
+.user-info-edit-page h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.user-info-edit-page .page-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 0px;
+}
+
+.user-info-edit-page .edit-form {
+    display: flex;
+    /* flex-direction: column;
+    align-items: center; */
+}
+
+.user-info-edit-page .edit-form form {
+    display: flex;
+}
+
+.user-info-edit-page .edit-form {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info-edit-page .edit-form .left-form {
+    width: 50%;
+    float: left;
+}
+
+.user-info-edit-page .edit-form .right-form {
+    width: 50%;
+    float: right;
+}
+
+.user-info-edit-page .edit-form input {
+    display: block;
+    width: 350px;
+    height: 50px;
+    margin: 10px 40px 50px 0px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: large;
+}
+
+.user-info-edit-page .edit-form label {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.user-info-edit-page .edit-form input:is([type="submit"]) {
+    width: 200px;
+    height: 50px;
+    background-color: #F78883;
+    border-radius: 30px;
+    margin: 10px 330px;
+    cursor: pointer;
+}
+
+.user-info-edit-page .edit-form input:is([type="submit"]):hover {
+    background-color: lavender;
+}
+
+.user-info-edit-page .profile-image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid;
+}
+
+.user-info-edit-page .profile-image {
+    text-align: center;
+    font-weight: bold;
+}
+
+.user-info-edit-page .profile-image input {
+    display: none;
+}
+
+.user-info-edit-page .page-container button{
+  background-color: lightgray;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 12px;
+}

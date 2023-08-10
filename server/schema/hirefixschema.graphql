@@ -1,0 +1,232 @@
+"""
+Author: Hironobu Fukuzawa
+Creation Date: 29/03/2023
+Description: Server-side functions
+"""
+scalar GraphQLDate
+scalar GraphQLTime
+
+type User {
+	_id: ID!
+    id: Int!
+	firstName: String!
+	lastName: String!
+    postalcode: Int
+    address: String
+    email: String!
+	phone: Int!
+    password: String!
+    profilepic: String
+    createdAt: GraphQLDate!
+}
+
+type Professional {
+	_id: ID!
+    id: Int!
+    user_id: Int!
+    company_id: ID
+    skill_ids: [ID]
+    service_ids: [ID]
+    createdAt: GraphQLDate!
+}
+
+type Company {
+	_id: ID!
+    professional_id: Int!
+    name: String!
+    email: String
+    location: String!
+    websiteUrl: String
+}
+
+type Skill {
+	_id: ID!
+    professional_id: Int!
+    name: String!
+    license: String
+    yearsOfExperience: Int!
+    createdAt: GraphQLDate!
+}
+
+type Service {
+    _id: ID!
+	id: Int!
+    user_id: Int # User id must be associated after the transaction has started
+    transaction_id: Int! # Create service (Newly created:0) / Requesst Approval(Inprogress:1) / Repair completed(Completed:2) / Request Denied(Cancelled:3) / Archive(Terminated:4)
+    professional_id: Int!
+    imageBase64: String!
+    category: String! # Electrical Works, Plumbing, Window Serving Aircon service
+	name: String!
+    description: String!
+    lowerrange: Int
+    upperrange: Int
+    finalprice: Int
+    createdAt: GraphQLDate!
+    scheduled_time: String # temporarily define String 16 Mar 2023, 1000hrs - 1300hrs
+    reservation_ids: [ID]
+    review_ids: [ID]
+}
+
+type QuoteRequest {
+    _id: ID!
+	id: Int!
+    user_id: Int!
+    service_id: Int!
+    status: Int! # 0: Newly created quoterequest to the professional 1: Quoterequest approved 2: Quoterequest cancelled
+    explanation: String!
+    service_time: String! # "Immediate", "yyyy-MM-dd"
+}
+
+type Review {
+    _id: ID!
+    service_id: Int!
+    ratingProficiency: Float!
+    ratingQos: Float!
+    ratingResponsiveness: Float!
+    comment: String
+    createdAt: GraphQLDate!
+    overallRating: Float!
+    image: String
+}
+
+type Reservation {
+    _id: ID!
+    service_id: Int!
+    user_id: Int!
+    date: GraphQLDate!
+    times: [GraphQLTime]
+}
+
+input InputLogin {
+	email: String!
+	password: String!
+}
+
+input InputUser {
+	firstName: String!
+	lastName: String!
+    postalcode: Int
+    address: String
+    email: String!
+	phone: Int!
+    password: String!
+}
+
+input InputProfessional {
+	firstName: String!
+	lastName: String!
+    postalcode: Int
+    address: String
+    email: String!
+	phone: Int!
+    password: String!
+    companyName: String
+    companyEmail: String
+    companyLocation: String
+    websiteUrl: String
+    skillName: String!
+    license: String
+    yearsOfExperience: Int!
+}
+
+input InputService {
+    professional_id: Int!
+    category: String!
+	name: String!
+    description: String!
+    lowerrange: Int
+    upperrange: Int
+    scheduled_time: String
+}
+
+input InputRequest {
+    user_id: Int!
+    service_id: Int!
+    status: Int!
+    explanation: String!
+    service_time: String! # "Immediate", "yyyy-MM-dd"
+}
+
+input InputReview {
+    ratingProficiency: Float!
+    ratingQos: Float!
+    ratingResponsiveness: Float!
+    comment: String
+    overallRating: Float!
+    image: String   
+}
+
+input InputCompany {
+    professional_id: Int!
+    name: String!
+    email: String
+    location: String!
+    websiteUrl: String
+}
+
+input InputSkill {
+    professional_id: Int!
+    name: String!
+    license: String
+    yearsOfExperience: Int!
+    createdAt: GraphQLDate!
+}
+
+input UpdateUser {
+    id: Int
+	firstName: String
+	lastName: String
+    postalcode: Int
+    address: String
+    email: String
+	phone: Int
+    password: String
+}
+
+input UpdateProfile{
+    id: Int
+    profilePic: String
+}
+
+input UpdateProfessional {
+    companyName: String
+    companyEmail: String
+    companyLocation: String
+    websiteUrl: String
+    skillName: String
+    license: String
+    yearsOfExperience: Int
+}
+
+input UpdateService {
+    id: Int!
+    transaction_id: Int!
+    user_id: Int!
+}
+
+type Query {
+    authenticate(loginInfo: InputLogin!):Boolean!
+    getUserID(email: String!):String!
+    getUserInfoById(userId: Int!):User!
+    getUserInformation(email: String!):User!
+    getAllServices:[Service]
+    getAllAvailableServices:[Service]
+    getServicesByCategory(category: String!):[Service]
+    getServicesByUser(userId: Int!):[Service]
+    getServicesById(professionalId: Int!):[Service]
+}
+
+type Mutation {
+    registerUser(user: InputUser!):User!
+    registerProfessional(user: InputProfessional!):Professional!
+    createService(professionalId: Int!, service: InputService!):Service!
+    createQuoteRequest(inputRequest: InputRequest!):QuoteRequest!
+    createReview(serviceId: ID!, review: InputReview!):Review!
+    updateUser(user: UpdateUser!):Boolean!
+    updateUserProfileImage(updateInfo: UpdateProfile!):Boolean!
+    updateProfessional(professionalId: Int!, professional: UpdateProfessional!):Boolean!
+    updateTransactionStatusOfService(updateStatus: UpdateService!):Boolean!
+    approveQuoteRequest(requestId: Int!):Boolean!
+    deleteUser(userID: Int!):Boolean!
+    deleteService(professionalId: Int!, serviceId: ID!):Boolean!
+}

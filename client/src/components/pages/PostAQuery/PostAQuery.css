@@ -1,0 +1,35 @@
+.post-a-query-page{
+    background-color: #F7EDE3;
+    min-height: 100vh;
+}
+
+.post-a-query-page .AI{
+    color: red;
+    margin-bottom: 50px;
+}
+
+.post-a-query-page .ai-container{
+    padding: 20px;
+    margin: 50px;
+    border: 2px solid;
+    background-color: ghostwhite;
+}
+
+.post-a-query-page .user-input{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+
+.post-a-query-page .title{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.post-a-query-page .send-button{
+    position: relative;
+    left:96%;
+    bottom:60px;
+    font-size: 20px;
+    cursor: pointer;
+}

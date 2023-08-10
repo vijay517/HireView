@@ -1,0 +1,79 @@
+/*login container css*/
+.login-page .login-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F7EDE3;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.login-page  form {
+    background-color: white;
+    width: 550px;
+    height: 550px;
+    border-radius: 40px;
+}
+
+
+/*form css*/
+.login-page  form input:not([type='radio']) {
+    display: block;
+    width: 500px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 10px;
+    border: 1px solid #EFF0F7;
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+    margin: 20px 20px;
+    font-size: large;
+}
+
+.login-page  form label {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.login-page  form input:is([type="submit"]) {
+    background-color: #f78883;
+}
+
+
+.login-page #error-message{
+    color: red;
+    text-align: center;
+    visibility: hidden;
+}
+
+.login-page  form input:is([type="submit"]):hover{
+    color: black;
+    background-color: grey;
+    cursor: pointer;
+}
+
+.login-page  p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-page  form input:is([type='radio']) {
+    margin: 30px 0px 30px 30px;
+}
+
+.login-page  form h2,
+.login-page  form p {
+    text-align: center;
+}
+
+
+/*image css*/
+.login-page  img {
+    width: 600px;
+    height: 750px;
+    background: url("./pictures/painter.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 8px solid;
+    background-color: transparent;
+}

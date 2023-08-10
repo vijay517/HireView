@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+.user-profile-icon-page {
+    width: 300px;
+    height: 200px;
+}
+
+.user-profile-icon-page .circle {
+    position: relative;
+    left: 75px;
+    z-index: 1;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-profile-icon-page .box {
+    position: relative;
+    bottom:30px;
+    width: 300px;
+    height: 200px;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    text-align: center;
+    padding: 60px;
+}
+
+.user-profile-icon-page .username {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.user-profile-icon-page .userid {
+    margin-top: 0px;
+}
+
+.user-profile-icon-page .date {
+    margin-top: 50px;
+    font-weight: normal;
+}

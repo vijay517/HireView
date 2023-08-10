@@ -1,0 +1,29 @@
+.user-profile-bar {
+    background-color: #F7EDE3;
+}
+
+.user-profile-bar .container {
+    padding: 10px;
+    height: 100vh;
+}
+
+
+.user-profile-bar .icon-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 55px;
+    margin-top: 10px;
+    margin-right: 65px;
+}
+
+.user-profile-bar .icon-container i {
+    margin-right: 10px;
+    font-size: 30px;
+
+}
+
+.user-profile-bar .icon-container div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
