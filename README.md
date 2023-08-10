@@ -13,3 +13,12 @@ https://drive.google.com/file/d/1OMC9SnLQW4yO3HbNvmytBDSiat4h4G1s/view?usp=shari
 
 # Notes
     - The project report and proposal are found under the report directory
+
+# Application home page
+
+<img width="526" alt="image" src="https://github.com/vijay517/HireView/assets/72249607/7609c57b-4c2f-46f5-bf3f-0e8263c245d6">
+
+
+# Application user page to find professional services
+
+<img width="475" alt="image" src="https://github.com/vijay517/HireView/assets/72249607/e6587450-d258-440f-a808-474bdd298b15">
